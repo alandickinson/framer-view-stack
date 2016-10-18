@@ -56,3 +56,4 @@ When more than one view has been presented, they will stack.
 * Add more event hooks
 * Maybe just subclass Layer?
 * Make things more customizable -- animation curves, card styling, dismiss button, stack offset, etc.
+* Adjust the stacking offsets for different screen ratios (currently works best with iPhone 6 ratio)
