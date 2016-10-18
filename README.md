@@ -2,7 +2,9 @@
 
 This is a module for the prototyping tool [Framer](http://framerjs.com). It helps you create and control views that stack on top of each other. You can swipe to dismiss them, or fan out the stack and select one to bring forward.
 
-<img src="http://inpo.co/viewstack/swipe-to-dismiss.gif" width="250px"/>
+Swipe to dismiss | Tap to fan out
+---|---
+<img src="http://inpo.co/viewstack/swipe-to-dismiss.gif" width="250px"/> | <img src="http://inpo.co/viewstack/tap-to-fan-out.gif" width="250px"/>
 
 ### Installation
 * Download the project from Github
