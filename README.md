@@ -15,7 +15,7 @@ Swipe to dismiss | Tap to fan out
 
 **Setup**
 
-Create the view stack, and then add a view to it using the `addView` method. It has one required parameter, `contents`, and two optional parameters: `title`, and `tintColor`.
+Create the view stack, and then add a view to it using the `addView` method.
 
 ```coffeescript
 stack = new ViewStack
