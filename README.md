@@ -4,7 +4,7 @@ This is a module for the prototyping tool [Framer](http://framerjs.com). It help
 
 Swipe to dismiss | Tap to fan out
 ---|---
-<img src="http://inpo.co/viewstack/swipe-to-dismiss-3.gif" width="250px"/> | <img src="http://inpo.co/viewstack/tap-to-fan-out.gif" width="250px"/>
+<img src="http://inpo.co/viewstack/swipe.gif" width="250px"/> | <img src="http://inpo.co/viewstack/tap-to-fan-out.gif" width="250px"/>
 
 ### Installation
 * Download the project from Github
