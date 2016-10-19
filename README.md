@@ -9,7 +9,7 @@ Swipe to dismiss | Tap to fan out | Scroll
 ### Installation
 * Download the project from Github
 * Copy `viewstack.coffee` into the modules folder of your Framer project.
-* Import the module into your project by requiring it like so: `ViewStack = require "viewstack"`
+* Import the module into your project by adding this line: `ViewStack = require "viewstack"`
 
 ### Usage
 
@@ -18,14 +18,14 @@ Swipe to dismiss | Tap to fan out | Scroll
 Create the view stack, and then add a view to it using the `addView` method.
 
 ```coffeescript
-stack = new ViewStack
+stack = new ViewStack.Manager
 
 myview = stack.addView
   contents: myLayer
  ```
- 
+
  `contents` is required and can be a layer or an array of layers. These will get added to the view's ScrollView in the order they appear in the array, so list the elements from bottom to top. The ScrollView allows vertical scrolling, and its content layer is sized to fit the content you pass into it.
- 
+
 The view gets added but is kept off screen. To display it, use the `presentView` method.
 
 **All addView Options**
@@ -37,7 +37,6 @@ myview = stack.addView
   arrowColor: "#000"  # default: "rgba(0,0,0,0.4)"
  ```
 
- 
 **Presenting Views**
 
 Use the `presentView` method to display a view on screen.
@@ -46,7 +45,33 @@ Use the `presentView` method to display a view on screen.
 stack.presentView(myview)
 ```
 
-When more than one view has been presented, they will stack. 
+When more than one view has been presented, they will stack.
+
+**Fanning Out**
+
+When views are stacked onscreen tapping the top area will fan all of them out and let you select one. This is enabled by default, but you can turn it off by setting the fanOut parameter to false when you create the view stack.
+
+```coffeescript
+stack = new ViewStack.Manager
+  fanOut: false
+```
+
+You can also fan out the current stack of views programmatically with `stack.fanOut()` -- If there's more than one view on screen and the feature hasn't been disabled.
+
+### Managing Views
+
+**Changing Views**
+* `stack.dismissViews([views])` takes an array of views and will dismiss all of them.
+* `stack.dismissCurrentView` dismisses the view that's currently on top.
+* `stack.switchToView(view)` rearranges the stack to move a specific view to the front. This will dismiss any views that are above the view you pass in.
+
+**Helpers**
+
+Views have helper methods you can use to get access to specific layers.
+
+* `myview.getScrollView()` returns the ScrollComponent.
+* `myview.getViewCover()` returns the cover layer used to dim the view when its behind others.
+* `myview.getHideBtn()` returns the hide button.
 
 -----
 
