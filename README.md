@@ -4,7 +4,7 @@ This is a module for the prototyping tool [Framer](http://framerjs.com). It help
 
 Swipe to dismiss | Tap to fan out | Scroll
 ---|---|---
-<img src="http://inpo.co/viewstack/vs-swipe-sm.gif" width="200px"/> | <img src="http://inpo.co/viewstack/vs-fan-out-sm.gif" width="200px"/> | <img src="http://inpo.co/viewstack/vs-scrolling-sm.gif" width="200px"/>
+<img src="http://inpo.co/viewstack/vs-swipe-exp.gif" width="200px"/> | <img src="http://inpo.co/viewstack/vs-fan-out-sm.gif" width="200px"/> | <img src="http://inpo.co/viewstack/vs-scrolling-sm.gif" width="200px"/>
 
 ### Installation
 * Download the project from Github
