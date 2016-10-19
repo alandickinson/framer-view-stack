@@ -47,6 +47,40 @@ stack.presentView(myview)
 
 When more than one view has been presented, they will stack.
 
+### Example
+
+```coffeescript
+# create content layers
+one = new Layer
+  frame: Screen.frame
+  backgroundColor: "rgba(0,128,255,1)"
+two = new Layer
+  frame: Screen.frame
+  backgroundColor: "rgba(255,128,0,1)"
+
+# create stack manager
+ViewStack = require "viewstack"
+stack = new ViewStack.Manager
+
+# add views to the stack, passing in sketch layers with the contents parameter
+view_one = stack.addView
+	contents: one
+	title: "One"
+	tintColor: "#000"
+view_two = stack.addView
+	contents: two
+	title: "Two"
+	tintColor: "#000"
+
+# add tap events to present views
+one.on Events.Tap, ->
+	stack.presentView(view_two)
+
+# present first view
+stack.presentView(view_one)
+```
+
+
 **Fanning Out**
 
 When views are stacked onscreen tapping the top area will fan all of them out and let you select one. This is enabled by default, but you can turn it off by setting the fanOut parameter to false when you create the view stack.
